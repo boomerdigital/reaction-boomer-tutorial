@@ -6,9 +6,33 @@ Reaction.registerPackage({
   autoEnable: true,
   layout: [{
     layout: "boomerLayout",
+    workflow: "coreProductGridWorkflow",
+    collection: "Products",
+    theme: "default",
+    enabled: true,
+    structure: {
+      template: "products",
+      layoutHeader: "NavBar",
+      layoutFooter: "Footer",
+      notFound: "productNotFound",
+      dashboardHeader: "",
+      dashboardControls: "dashboardControls",
+      dashboardHeaderControls: "",
+      adminControlsFooter: "adminControlsFooter"
+    }
+  },
+  {
+    layout: "boomerLayout",
     workflow: "coreWorkflow",
     theme: "default",
     enabled: true,
-    priority: 1 // consider adding this and going over it
+    structure: {
+      template: "products",
+      layoutHeader: "NavBar",
+      layoutFooter: "Footer",
+      notFound: "productNotFound",
+      dashboardControls: "dashboardControls",
+      adminControlsFooter: "adminControlsFooter"
+    }
   }]
 })
